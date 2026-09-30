@@ -1,18 +1,90 @@
-// Menu no celular
-const menuBtn = document.querySelector("[data-menu-btn]");
-const nav = document.querySelector("[data-nav]");
+(function () {
+  var root = document.documentElement;
 
-menuBtn.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", open);
-});
+  /* Tema: escuro por padrão; lembra a escolha quando o navegador permite */
+  try {
+    var saved = localStorage.getItem("theme");
+    if (saved === "light" || saved === "dark")
+      root.setAttribute("data-theme", saved);
+  } catch (e) {}
 
-nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
+  function updateMeta() {
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta)
+      meta.setAttribute(
+        "content",
+        root.getAttribute("data-theme") === "light" ? "#f6f7f9" : "#0c0e11",
+      );
+  }
+  updateMeta();
+
+  document
+    .getElementById("theme-toggle")
+    .addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("theme", next);
+      } catch (e) {}
+      updateMeta();
+    });
+
+  /* Menu mobile */
+  var menuBtn = document.getElementById("menu-btn");
+  var links = document.getElementById("nav-links");
+  menuBtn.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
   });
-});
+  links.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      links.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+  });
 
-// Ano no rodapé
-document.querySelector("[data-year]").textContent = new Date().getFullYear();
+  /* Animação de entrada */
+  var items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            en.target.classList.add("in");
+            io.unobserve(en.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+    items.forEach(function (el) {
+      io.observe(el);
+    });
+  } else {
+    items.forEach(function (el) {
+      el.classList.add("in");
+    });
+  }
+
+  /* Link ativo no menu */
+  var sections = ["sobre", "stack", "projetos", "contato"].map(function (id) {
+    return document.getElementById(id);
+  });
+  var navLinks = document.querySelectorAll(".nav-links a");
+  window.addEventListener(
+    "scroll",
+    function () {
+      var y = window.scrollY + 120,
+        current = "";
+      sections.forEach(function (s) {
+        if (s && s.offsetTop <= y) current = s.id;
+      });
+      navLinks.forEach(function (a) {
+        a.classList.toggle("active", a.getAttribute("href") === "#" + current);
+      });
+    },
+    { passive: true },
+  );
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();

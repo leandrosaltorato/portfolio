@@ -1,353 +1,331 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leandro Saltorato Junior | Desenvolvedor Full-stack e Mobile</title>
-    <meta
-      name="description"
-      content="Portfólio de Leandro Saltorato Junior, desenvolvedor júnior de Amparo, SP: web full-stack com Node.js, Express, Prisma e MySQL, e mobile com Flutter."
-    />
-    <link rel="icon" href="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header-inner">
-        <a href="#inicio" class="brand">Leandro Saltorato</a>
-        <button
-          class="menu-btn"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          data-menu-btn
-        >
-          Menu
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leandro Saltorato Junior — Desenvolvedor Júnior</title>
+  <meta name="description" content="Portfólio de Leandro Saltorato Junior, desenvolvedor júnior com JavaScript, React, Node.js, Flutter e Vite. Projetos, tecnologias e contato." />
+  <meta name="theme-color" content="#0c0e11" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#inicio" class="logo" aria-label="Início">leandro<span>.dev</span></a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#stack">Tech Stack</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </button>
-        <nav class="nav" data-nav aria-label="Principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#experiencia">Experiência</a>
-          <a href="#contato" class="nav-cta">Contato</a>
-        </nav>
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero" id="inicio">
-        <div class="container hero-grid">
-          <div>
-            <p class="hero-role">Desenvolvedor júnior em Amparo, SP</p>
-            <h1>
-              Sistemas web full-stack e aplicativos mobile, com código simples
-              de manter.
-            </h1>
-            <p class="lead">
-              Sou Leandro. Desenvolvo com Node.js, Express, Prisma e MySQL no
-              back-end, HTML, CSS e JavaScript no front-end e Flutter no mobile.
-              Estou em busca da minha primeira oportunidade em um time de
-              desenvolvimento.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="#projetos">Ver projetos</a>
-              <a
-                class="btn btn-icon"
-                href="https://github.com/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                aria-label="GitHub"
-                title="GitHub"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                  /></svg
-              ></a>
-              <a
-                class="btn btn-icon"
-                href="https://www.linkedin.com/in/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  /></svg
-              ></a>
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="status"><span class="dot"></span> Aberto a oportunidades</div>
+          <h1>Olá, eu sou<br /><span class="accent">Leandro Saltorato</span> Junior.</h1>
+          <p class="role">Desenvolvedor júnior que transforma ideias em aplicações web e mobile, com JavaScript, React, Node.js e Flutter.</p>
+          <div class="hero-cta">
+            <a href="#projetos" class="btn btn-primary">
+              Ver projetos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="https://github.com/leandrosaltorato" target="_blank" rel="noopener noreferrer" class="btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="terminal reveal" aria-hidden="true">
+          <div class="terminal-bar"><i></i><i></i><i></i></div>
+          <div class="terminal-body">
+<span class="k">const</span> leandro = {<br />
+&nbsp;&nbsp;cargo: <span class="s">"Desenvolvedor Júnior"</span>,<br />
+&nbsp;&nbsp;stack: [<span class="s">"JavaScript"</span>, <span class="s">"React"</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">"Node.js"</span>, <span class="s">"Flutter"</span>, <span class="s">"Vite"</span>],<br />
+&nbsp;&nbsp;competicoes: [<span class="s">"FLL"</span>, <span class="s">"OBR"</span>, <span class="s">"SPSkills"</span>],<br />
+&nbsp;&nbsp;local: <span class="s">"Amparo, SP"</span><br />
+};
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section id="sobre">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <p class="eyebrow">Sobre mim</p>
+          <h2 class="section-title" style="margin-bottom:22px">Código, robôs e competição.</h2>
+          <p>Sou <strong>desenvolvedor</strong> e estudante de Análise e Desenvolvimento de Sistemas. Gosto de construir interfaces claras e de entender como tudo funciona por trás delas, do front-end ao back-end.</p>
+          <p>Minha base vem das competições: passei por <strong>FLL, OBR e SPSkills</strong>, onde aprendi a resolver problemas sob pressão, trabalhar em equipe e entregar dentro do prazo. Hoje levo essa mentalidade para os projetos de software.</p>
+          <div class="meta">
+            <span class="chip">📍 Amparo, SP</span>
+            <span class="chip">🎓 Análise e Desenvolvimento de Sistemas</span>
+          </div>
+        </div>
+
+        <div class="timeline reveal" aria-label="Trajetória em competições">
+          <div class="tl-item">
+            <h3>FIRST LEGO League (FLL)</h3>
+            <div class="when">4 anos como competidor · 1 ano como mentor</div>
+            <p>Robótica, pesquisa e trabalho em equipe; depois, a experiência de orientar uma nova equipe.</p>
+          </div>
+          <div class="tl-item">
+            <h3>OBR — Olimpíada Brasileira de Robótica</h3>
+            <div class="when">2 anos de participação</div>
+            <p>Desafios práticos de robótica e programação em competição nacional.</p>
+          </div>
+          <div class="tl-item">
+            <h3>SPSkills</h3>
+            <div class="when">1 ano de participação</div>
+            <p>Competição de habilidades técnicas com foco em execução e qualidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section id="stack">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Tech Stack</p>
+          <h2 class="section-title">Ferramentas que uso no dia a dia</h2>
+          <p>Destaque para as tecnologias principais; o restante complementa os projetos do meu GitHub.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Linguagens</h3>
+            <div class="tags">
+              <span class="tag main">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">C++</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
             </div>
-          </div>
-
-          <aside class="stack" aria-label="Tecnologias">
-            <h2 class="stack-title">Tecnologias</h2>
-            <dl>
-              <div>
-                <dt>Front-end</dt>
-                <dd>HTML, CSS, JavaScript</dd>
-              </div>
-              <div>
-                <dt>Back-end</dt>
-                <dd>Node.js, Express, Prisma</dd>
-              </div>
-              <div>
-                <dt>Banco de dados</dt>
-                <dd>MySQL</dd>
-              </div>
-              <div>
-                <dt>Mobile</dt>
-                <dd>Flutter</dd>
-              </div>
-              <div>
-                <dt>Ferramentas</dt>
-                <dd>Git, GitHub</dd>
-              </div>
-            </dl>
-          </aside>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Front-end</h3>
+            <div class="tags">
+              <span class="tag main">React</span>
+              <span class="tag main">Vite</span>
+              <span class="tag">HTML semântico</span>
+              <span class="tag">CSS responsivo</span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Back-end e dados</h3>
+            <div class="tags">
+              <span class="tag main">Node.js</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Prisma</span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Mobile</h3>
+            <div class="tags">
+              <span class="tag main">Flutter</span>
+              <span class="tag">React Native</span>
+              <span class="tag">Expo</span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Ferramentas</h3>
+            <div class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Insomnia</span>
+              <span class="tag">Vercel</span>
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="sobre">
-        <div class="container two-col">
-          <h2 class="section-title">Sobre mim</h2>
-          <div class="prose">
-            <p>
-              Gosto de transformar requisitos em sistemas que funcionam bem e
-              são fáceis de usar. Meu foco está em código legível, organização
-              de rotas e camadas no back-end e interfaces responsivas
-            </p>
-            <p>
-              Participei de competições WorldSkills, onde treinei
-              desenvolvimento sob prazo: leitura de requisitos, modelagem de
-              banco de dados, back-end, front-end e casos de teste. Essa rotina
-              me deu disciplina para entregar projetos completos do começo ao
-              fim
-            </p>
-          </div>
+    <!-- ============ PROJETOS ============ -->
+    <section id="projetos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projetos em destaque</p>
+          <h2 class="section-title">Alguns trabalhos recentes</h2>
+          <p>Seleção dos repositórios fixados no meu GitHub.</p>
         </div>
-      </section>
 
-      <section class="section section-alt" id="projetos">
-        <div class="container">
-          <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
 
-          <div class="projects">
-            <article class="project">
-              <p class="project-kind">Web full-stack</p>
-              <h3>Just in Time: gestão de produção para fábrica de MDF</h3>
-              <p>
-                Sistema com login, cadastro de produtos e controle de produção
-                no modelo Just in Time. Inclui levantamento de requisitos,
-                modelagem do banco (DER), script de banco com Prisma e casos de
-                teste.
-              </p>
-              <ul class="tags">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Prisma</li>
-                <li>MySQL</li>
-              </ul>
-              <a
-                class="link"
-                href="https://github.com/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                >Ver no GitHub</a
-              >
-            </article>
+          <!-- 1 -->
+          <article class="project reveal">
+            <div class="thumb">
+              <span class="fallback">consultancy-project</span>
+              <img loading="lazy" src="https://opengraph.githubassets.com/1/leandrosaltorato/consultancy-project" alt="Pré-visualização do projeto consultancy-project" onerror="this.remove()" />
+            </div>
+            <div class="project-body">
+              <h3>Agendamento de Consultas</h3>
+              <p>Projeto fullstack para agendar consultas, com frontend e backend separados e documentação do desenvolvimento em relatório.</p>
+              <div class="tags"><span class="tag">JavaScript</span><span class="tag">Fullstack</span></div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/leandrosaltorato/consultancy-project" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
 
-            <article class="project">
-              <p class="project-kind">Web full-stack</p>
-              <h3>Sistema de avaliação escolar</h3>
-              <p>
-                Aplicação multipágina conectada a uma API própria. Começou com
-                dados simulados no navegador e evoluiu para requisições reais,
-                com endpoint de login, rotas padronizadas e tratamento de erros.
-              </p>
-              <ul class="tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Express</li>
-                <li>Prisma</li>
-                <li>MySQL</li>
-              </ul>
-              <a
-                class="link"
-                href="https://github.com/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                >Ver no GitHub</a
-              >
-            </article>
+          <!-- 2 -->
+          <article class="project reveal">
+            <div class="thumb">
+              <span class="fallback">sporty-project</span>
+              <img loading="lazy" src="https://opengraph.githubassets.com/1/leandrosaltorato/sporty-project" alt="Pré-visualização do projeto sporty-project" onerror="this.remove()" />
+            </div>
+            <div class="project-body">
+              <h3>Locação de Equipamentos Esportivos</h3>
+              <p>Aplicação para locação de equipamentos esportivos, com API no backend, interface no frontend e coleção de requisições do Insomnia.</p>
+              <div class="tags"><span class="tag">JavaScript</span><span class="tag">API REST</span></div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/leandrosaltorato/sporty-project" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
 
-            <article class="project">
-              <p class="project-kind">Aplicação web</p>
-              <h3>Live Coach</h3>
-              <p>
-                Aplicação com autenticação via Supabase e funcionalidades de IA
-                integradas por meio de Edge Functions que consomem a API da
-                OpenAI.
-              </p>
-              <ul class="tags">
-                <li>React</li>
-                <li>TypeScript</li>
-              </ul>
-              <a
-                class="link"
-                href="https://github.com/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                >Ver no GitHub</a
-              >
-            </article>
+          <!-- 3 -->
+          <article class="project reveal">
+            <div class="thumb">
+              <span class="fallback">full-clothing-store</span>
+              <img loading="lazy" src="https://opengraph.githubassets.com/1/leandrosaltorato/full-clothing-store" alt="Pré-visualização do projeto full-clothing-store" onerror="this.remove()" />
+            </div>
+            <div class="project-body">
+              <h3>Loja de Roupas</h3>
+              <p>Projeto completo de design e implementação de uma loja de roupas, com interface em HTML, CSS e JavaScript e backend próprio.</p>
+              <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
+              <div class="project-links">
+                <a class="link-btn primary" href="https://full-clothing-store.vercel.app" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+                  Demo
+                </a>
+                <a class="link-btn" href="https://github.com/leandrosaltorato/full-clothing-store" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
 
-            <article class="project">
-              <p class="project-kind">Aplicação web</p>
-              <h3>Controle de abastecimento</h3>
-              <p>
-                Aplicativo responsivo para registrar abastecimentos de veículos,
-                com dados salvos no navegador via localStorage e código em
-                JavaScript puro.
-              </p>
-              <ul class="tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <a
-                class="link"
-                href="https://github.com/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                >Ver no GitHub</a
-              >
-            </article>
-          </div>
+          <!-- 4 -->
+          <article class="project reveal">
+            <div class="thumb">
+              <span class="fallback">quiz-sociology-and-philosophy</span>
+              <img loading="lazy" src="https://opengraph.githubassets.com/1/leandrosaltorato/quiz-sociology-and-philosophy" alt="Pré-visualização do projeto quiz-sociology-and-philosophy" onerror="this.remove()" />
+            </div>
+            <div class="project-body">
+              <h3>Quiz de Sociologia e Filosofia</h3>
+              <p>App mobile de quiz para as matérias de Sociologia e Filosofia, desenvolvido em grupo e testado por um professor da escola.</p>
+              <div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span></div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/leandrosaltorato/quiz-sociology-and-philosophy" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="project reveal">
+            <div class="thumb">
+              <span class="fallback">spotify-web</span>
+              <img loading="lazy" src="https://opengraph.githubassets.com/1/leandrosaltorato/spotify-web" alt="Pré-visualização do projeto spotify-web" onerror="this.remove()" />
+            </div>
+            <div class="project-body">
+              <h3>Player de Música Web</h3>
+              <p>Frontend funcional de player de música, inspirado no layout do Spotify, feito para praticar layout e interação com JavaScript puro.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/leandrosaltorato/spotify-web" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="project reveal">
+            <div class="thumb">
+              <span class="fallback">movie-website</span>
+              <img loading="lazy" src="https://opengraph.githubassets.com/1/leandrosaltorato/movie-website" alt="Pré-visualização do projeto movie-website" onerror="this.remove()" />
+            </div>
+            <div class="project-body">
+              <h3>Site de Apresentação de Filme</h3>
+              <p>Landing page de apresentação de um filme, com foco em estrutura semântica e estilização responsiva.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/leandrosaltorato/movie-website" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                  Código
+                </a>
+              </div>
+            </div>
+          </article>
+
         </div>
-      </section>
 
-      <section class="section" id="experiencia">
-        <div class="container two-col">
-          <h2 class="section-title">Experiência</h2>
-          <ol class="timeline">
-            <li>
-              <h3>Competidor, FLL - First Lego League</h3>
-              <p class="period">2022 — 2024</p>
-              <p>
-                Preparação e participação em competições da First Lego League
-                (FLL), com foco em robótica, programação, resolução de problemas
-                e trabalho em equipe. Atuação no desenvolvimento, programação e
-                testes de robôs para desafios competitivos.
-              </p>
-            </li>
-
-            <li>
-              <h3>Competidor, OBR</h3>
-              <p class="period">2024 — 2025</p>
-              <p>
-                Preparação e participação na Olimpíada Brasileira de Robótica
-                (OBR), com foco em programação, montagem e testes de robôs
-                autônomos, resolução de desafios e aplicação de conceitos de
-                robótica, lógica de programação e fundamentos de IoT.
-              </p>
-            </li>
-
-            <li>
-              <h3>
-                Competidor, SPSkills — Desenvolvimento de Dispositivos Móveis
-              </h3>
-              <p class="period">2026</p>
-              <p>
-                Preparação e participação na competição SPSkills, com
-                treinamento focado no desenvolvimento de aplicativos móveis,
-                incluindo planejamento, implementação, testes e resolução de
-                problemas relacionados ao desenvolvimento de aplicações.
-              </p>
-            </li>
-
-            <li>
-              <h3>Dev Junior - Freelance</h3>
-              <p class="period">2026 — Presente</p>
-              <p>
-                Desenvolvimento de sistemas web e aplicativos mobile com
-                Flutter, desde o planejamento e implementação até os testes e
-                publicação dos projetos, mantendo o código organizado e
-                versionado no GitHub.
-              </p>
-            </li>
-          </ol>
+        <div class="more reveal">
+          <a class="btn" href="https://github.com/leandrosaltorato?tab=repositories" target="_blank" rel="noopener noreferrer">Ver todos os repositórios no GitHub</a>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="contact" id="contato">
-        <div class="container">
-          <h2>Vamos conversar?</h2>
-          <a class="contact-mail" href="mailto:saltoratojuniorleandro@gmail.com"
-            >saltoratojuniorleandro@gmail.com</a
-          >
-          <ul class="contact-links">
-            <li>
-              <a
-                class="icon-link"
-                href="https://www.linkedin.com/in/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  /></svg
-              ></a>
-            </li>
-            <li>
-              <a
-                class="icon-link"
-                href="https://github.com/leandrosaltorato"
-                target="_blank"
-                rel="noopener"
-                aria-label="GitHub"
-                title="GitHub"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                  /></svg
-              ></a>
-            </li>
-            <li><a href="tel:+5519999836218">(19) 99983-6218</a></li>
-          </ul>
+  <!-- ============ RODAPÉ / CONTATO ============ -->
+  <footer class="site-footer" id="contato">
+    <div class="container">
+      <div class="contact reveal">
+        <p class="eyebrow">Contato</p>
+        <h2>Vamos conversar?</h2>
+        <p>Estou em busca de oportunidades para crescer como desenvolvedor. Se gostou do meu trabalho, me chama.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/leandrosaltorato" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/leandrosaltorato" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <!-- Quer um e-mail? Descomente e troque pelo seu:
+          <a class="btn" href="mailto:seu-email@exemplo.com">E-mail</a> -->
         </div>
-      </section>
-    </main>
+      </div>
 
-    <script src="./assets/js/script.js"></script>
-  </body>
+      <div class="copy">
+        <span>© <span id="year"></span> Leandro Saltorato Junior</span>
+        <span>Feito com HTML, CSS e JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/script.js" defer></script>
+</body>
 </html>
