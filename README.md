@@ -56,6 +56,3 @@ Por ser um site estático, pode ser publicado gratuitamente em:
 - **Vercel** ou **Netlify**: importe o repositório, sem comando de build e com a raiz do projeto como diretório de saída.
 - **GitHub Pages**: em *Settings → Pages*, selecione a branch `main` e a pasta `/ (root)`.
 
----
-
-Feito com HTML, CSS e JavaScript.
