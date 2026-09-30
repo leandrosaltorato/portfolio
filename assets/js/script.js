@@ -1,7 +1,6 @@
 (function () {
   var root = document.documentElement;
 
-  /* Tema: escuro por padrão; lembra a escolha quando o navegador permite */
   try {
     var saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark")
@@ -16,26 +15,31 @@
         root.getAttribute("data-theme") === "light" ? "#f6f7f9" : "#0c0e11",
       );
   }
+
   updateMeta();
 
   document
     .getElementById("theme-toggle")
     .addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+
       root.setAttribute("data-theme", next);
+
       try {
         localStorage.setItem("theme", next);
       } catch (e) {}
+
       updateMeta();
     });
 
-  /* Menu mobile */
   var menuBtn = document.getElementById("menu-btn");
   var links = document.getElementById("nav-links");
+
   menuBtn.addEventListener("click", function () {
     var open = links.classList.toggle("open");
     menuBtn.setAttribute("aria-expanded", open);
   });
+
   links.addEventListener("click", function (e) {
     if (e.target.tagName === "A") {
       links.classList.remove("open");
@@ -43,8 +47,8 @@
     }
   });
 
-  /* Animação de entrada */
   var items = document.querySelectorAll(".reveal");
+
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(
       function (entries) {
@@ -57,6 +61,7 @@
       },
       { threshold: 0.12 },
     );
+
     items.forEach(function (el) {
       io.observe(el);
     });
@@ -66,19 +71,22 @@
     });
   }
 
-  /* Link ativo no menu */
   var sections = ["sobre", "stack", "projetos", "contato"].map(function (id) {
     return document.getElementById(id);
   });
+
   var navLinks = document.querySelectorAll(".nav-links a");
+
   window.addEventListener(
     "scroll",
     function () {
       var y = window.scrollY + 120,
         current = "";
+
       sections.forEach(function (s) {
         if (s && s.offsetTop <= y) current = s.id;
       });
+
       navLinks.forEach(function (a) {
         a.classList.toggle("active", a.getAttribute("href") === "#" + current);
       });
